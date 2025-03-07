@@ -29,6 +29,7 @@ body {
 /* ----------------- Navbar Styles ----------------- */
 .golden-nav {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -36,7 +37,6 @@ body {
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
   border-bottom: 2px solid #d4af37; /* Gold border */
   transition: background 0.5s ease;
-  flex-wrap: wrap;
 }
 
 .dark-mode .golden-nav {
@@ -82,20 +82,21 @@ body {
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
 
-/* ----------------- Responsive Navbar for Mobile Devices ----------------- */
-@media (max-width: 600px) {
+/* -------------- Responsive Tweaks for Mobile Screens -------------- */
+@media (max-width: 768px) {
   .golden-nav {
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 0.8rem;
   }
-  
+
   .golden-nav a {
-    margin: 5px 0;
-    font-size: 0.9rem;
+    margin: 8px 0;
+    font-size: 1rem;
   }
-  
+
   .dark-mode-toggle {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-left: 0; /* Align toggle button if desired */
   }
 }
 
