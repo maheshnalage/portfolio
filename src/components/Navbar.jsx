@@ -9,7 +9,8 @@ import {
   FaTools,
   FaBriefcase,
   FaEnvelope,
-  FaBars
+  FaBars,
+  FaTimes
 } from 'react-icons/fa';
 
 const Navbar = ({ toggleDarkMode }) => {
@@ -22,9 +23,8 @@ const Navbar = ({ toggleDarkMode }) => {
   return (
     <nav className="golden-nav">
       {/* Logo/Name */}
-      <div className="nav-logo">😇
-
-
+      <div className="nav-logo">
+        😇
       </div>
 
       {/* Hamburger Icon for Mobile */}
@@ -34,6 +34,11 @@ const Navbar = ({ toggleDarkMode }) => {
 
       {/* Nav Links */}
       <div className={`nav-links ${menuOpen ? 'show-menu' : ''}`}>
+        {/* Close Button (visible on mobile) */}
+        <button className="close-nav-btn" onClick={handleMenuToggle}>
+          <FaTimes />
+        </button>
+
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
           <FaHome /> Home
         </NavLink>
