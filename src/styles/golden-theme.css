@@ -36,6 +36,7 @@ body {
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
   border-bottom: 2px solid #d4af37; /* Gold border */
   transition: background 0.5s ease;
+  flex-wrap: wrap;
 }
 
 .dark-mode .golden-nav {
@@ -79,6 +80,23 @@ body {
 .dark-mode-toggle:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+}
+
+/* ----------------- Responsive Navbar for Mobile Devices ----------------- */
+@media (max-width: 600px) {
+  .golden-nav {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  
+  .golden-nav a {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  .dark-mode-toggle {
+    margin: 10px 0;
+  }
 }
 
 /* ----------------- Hero Section ----------------- */
@@ -196,7 +214,6 @@ body {
 }
 
 /* ----------------- Skills & Experience Cards ----------------- */
-/* (Experience cards styling remains unchanged) */
 .skill-card, .experience-card {
   background: #fff;
   border: 2px solid #d4af37;
