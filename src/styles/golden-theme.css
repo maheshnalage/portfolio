@@ -1,0 +1,401 @@
+/* ----------------- Global Reset & Sticky Footer Setup ----------------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----------------- Global styles for the white–golden premium theme ----------------- */
+
+/* Light mode */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;  /* Rich white background */
+  color: #333;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: #121212; /* Deep black background */
+  color: #e0e0e0;
+}
+
+/* ----------------- Navbar Styles ----------------- */
+.golden-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ffffff, #e6e6e6); /* Light gradient */
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  border-bottom: 2px solid #d4af37; /* Gold border */
+  transition: background 0.5s ease;
+}
+
+.dark-mode .golden-nav {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+}
+
+.golden-nav a {
+  margin: 0 20px;
+  color: #333;  /* Dark text in light mode */
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark-mode .golden-nav a {
+  color: #d4af37;
+}
+
+.golden-nav a:hover {
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+.golden-nav a.active {
+  color: #ffd700; /* Brighter gold for active link */
+  text-shadow: 0 0 10px #ffd700;
+}
+
+.dark-mode-toggle {
+  background: #d4af37;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+}
+
+/* ----------------- Hero Section ----------------- */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex: 1; /* Allows hero to take remaining space */
+}
+
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Crystal Star Effect for Name - apply this class in your HeroSection */
+.crystal-effect {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fce95e;
+  text-shadow: 0 0 20px rgba(199, 102, 102, 0.9), 0 0 40px rgba(7, 7, 7, 0.7);
+  animation: crystalShimmer 2s infinite alternate;
+}
+
+@keyframes crystalShimmer {
+  0% {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 40px rgba(212, 175, 55, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(212, 175, 55, 1), 0 0 50px rgba(212, 175, 55, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(53, 5, 5, 0.9), 0 0 40px rgba(55, 11, 11, 0.7);
+  }
+}
+
+/* ----------------- Project Cards ----------------- */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced min size to 250px */
+  gap: 40px; /* Reduced gap to 20px */
+  padding: 40px;
+  justify-items: center;
+}
+
+.project-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  padding: 20px; /* Reduced padding */
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px; /* Reduced max width */
+  min-height: 7%; /* Reduced min height */
+}
+
+.dark-mode .project-card {
+  background: #1e1e1e;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+/* For project images if using <img> inside card */
+.project-img {
+  width: 100%;
+  max-height: 150px; /* Adjusted height if needed */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Tech stack styling */
+.tech-stack {
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
+.dark-mode .tech-stack {
+  color: #e0e0e0;
+}
+
+/* Project links */
+.project-links a {
+  display: inline-block;
+  margin: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark-mode .project-links a {
+  color: #d4af37;
+}
+
+.project-links a:hover {
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+/* ----------------- Skills & Experience Cards ----------------- */
+/* (Experience cards styling remains unchanged) */
+.skill-card, .experience-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.dark-mode .skill-card, .dark-mode .experience-card {
+  background: #1e1e1e;
+  border-color: #444;
+}
+
+.skill-card:hover, .experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+/* ----------------- Contact Form ----------------- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #f0f0f0;
+  color: #333;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* ----------------- Contact Links ----------------- */
+.contact-links {
+  margin-top: 20px;
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #d4af37;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.resume-download:hover {
+  background: #b1952e;
+}
+
+/* ----------------- Footer ----------------- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #e6e6e6);
+  border-top: 2px solid #d4af37;
+  box-shadow: 0 -4px 15px rgba(212, 175, 55, 0.4);
+  margin-top: auto; /* Ensures footer sticks to bottom when content is short */
+}
+
+.dark-mode .footer {
+  background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+}
+
+.footer p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.dark-mode .footer p {
+  color: #d4af37;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark-mode .footer-links a {
+  color: #d4af37;
+}
+
+.footer-links a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+}
+
+/* ----------------- Additional Spacing ----------------- */
+.container {
+  padding: 20px;
+}
+
+/* ----------------- Updated About Section Styles with Golden Theme ----------------- */
+.about-container {
+  padding: 3rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: 'Georgia', serif;
+  background-color: #fff8e7;
+  color: #5c3a21;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #a67c00;
+  margin-bottom: 2rem;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ----------------- Updated Skills Section Styles with Golden Theme ----------------- */
+.skills.container {
+  padding: 3rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #fff8e7;
+  color: #5c3a21;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Georgia', serif;
+}
+
+.skills.container h1 {
+  text-align: center;
+  color: #a67c00;
+  margin-bottom: 2rem;
+}
+
+.skills-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background-color: #f9f3e9;
+  border: 1px solid #e2c044;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem;
+  flex: 1 1 280px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card h3 {
+  color: #a67c00;
+  margin: 0.5rem 0;
+}
+
+.skill-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
