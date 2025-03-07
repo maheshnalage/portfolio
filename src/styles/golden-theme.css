@@ -168,11 +168,6 @@ body {
     min-width: 200px;
   }
   
-  /* Show close button on mobile */
-  .close-nav-btn {
-    display: block;
-  }
-
   .dark-mode .nav-links {
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
   }
@@ -186,6 +181,13 @@ body {
   .nav-links a {
     margin: 10px 0;
     font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  
+  /* Show close button on mobile */
+  .close-nav-btn {
+    display: block;
   }
   
   /* Dark mode toggle can shift under hamburger on mobile */
@@ -216,28 +218,40 @@ body {
   transform: scale(1.1);
 }
 
-/* Hero Buttons */
+/* Hero Buttons - Filled style with border */
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
-
 .hero-button {
-  background: #d4af37;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
+  padding: 12px 24px;
+  border: 2px solid #d4af37;
   border-radius: 12px;
+  background-color: #d4af37;
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 .hero-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  background-color: #b1952e;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero-button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Crystal Star Effect for Name */
@@ -269,7 +283,6 @@ body {
   padding: 40px;
   justify-items: center;
 }
-
 .project-card {
   background: #fff;
   border: 2px solid #d4af37;
@@ -383,7 +396,7 @@ body {
   background: linear-gradient(135deg, #ffffff, #e6e6e6);
   border-top: 2px solid #d4af37;
   box-shadow: 0 -4px 15px rgba(212, 175, 55, 0.4);
-  margin-top: auto; /* Ensures footer sticks to bottom when content is short */
+  margin-top: auto;
 }
 .dark-mode .footer {
   background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
