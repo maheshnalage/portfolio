@@ -11,12 +11,11 @@ function Contact() {
         <button type="submit">Send</button>
       </form>
       <div className="contact-links">
-        <p>Email: <a href="mailto:maheshnalage@example.com">maheshnalage@example.com</a></p>
+        <p>Email: <a href="mailto:maheshnalage47@gmail.com">maheshnalage@example.com</a></p>
         <p>
           LinkedIn:{" "}
           <a
-            href="https://linkedin.com/in/maheshnalage"
-            target="_blank"
+            href="https://www.linkedin.com/in/mahesh-nalage715"
             rel="noopener noreferrer"
           >
             linkedin.com/in/maheshnalage
