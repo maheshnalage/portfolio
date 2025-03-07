@@ -157,19 +157,19 @@ body {
     display: none;
     position: absolute;
     top: 70px;    /* Position the menu below the navbar */
-    right: 20px;  /* Position the menu to the right */
+    left: 0;
+    width: 100%;
     flex-direction: column;
     background: linear-gradient(135deg, #ffffff, #e6e6e6);
-    border: 2px solid #d4af37;
-    border-radius: 10px;
-    padding: 1rem;
+    border-bottom: 2px solid #d4af37;
     box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+    padding: 1rem 0;
     z-index: 999; /* Ensure menu is on top */
-    min-width: 200px;
   }
   
   .dark-mode .nav-links {
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border-bottom: 2px solid #444;
   }
   
   /* Show the menu when toggled */
@@ -188,6 +188,8 @@ body {
   /* Show close button on mobile */
   .close-nav-btn {
     display: block;
+    text-align: right;
+    padding: 0 1rem;
   }
   
   /* Dark mode toggle can shift under hamburger on mobile */
@@ -218,7 +220,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Hero Buttons - Filled style with border */
+/* Hero Buttons styled like the dark mode toggle */
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
@@ -227,19 +229,19 @@ body {
   flex-wrap: wrap;
 }
 .hero-button {
-  padding: 12px 24px;
-  border: 2px solid #d4af37;
-  border-radius: 12px;
-  background-color: #d4af37;
+  background: #d4af37;
   color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 .hero-button:hover {
-  background-color: #b1952e;
-  transform: translateY(-2px);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
 
 @media (max-width: 768px) {
