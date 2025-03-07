@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 #root {
   display: flex;
@@ -159,19 +159,22 @@ body {
     display: none;
     position: absolute;
     top: 70px;    /* Position the menu below the navbar */
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
     flex-direction: column;
     background: linear-gradient(135deg, #ffffff, #e6e6e6);
-    border-bottom: 2px solid #d4af37;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 1rem;
     box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
-    padding: 1rem 0;
     z-index: 999; /* Ensure menu is on top */
   }
   
   .dark-mode .nav-links {
     background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
-    border-bottom: 2px solid #444;
+    border: 2px solid #444;
   }
   
   /* Show the menu when toggled */
@@ -234,14 +237,15 @@ body {
   background: #d4af37;
   color: #fff;
   padding: 12px 20px;
-  border: none;
+  border: 2px solid #d4af37;
   border-radius: 12px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 .hero-button:hover {
+  background: #b1952e;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
@@ -400,7 +404,7 @@ body {
   background: linear-gradient(135deg, #ffffff, #e6e6e6);
   border-top: 2px solid #d4af37;
   box-shadow: 0 -4px 15px rgba(212, 175, 55, 0.4);
-  margin-top: auto; /* Ensures footer sticks to bottom when content is short */
+  margin-top: auto;
 }
 .dark-mode .footer {
   background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
