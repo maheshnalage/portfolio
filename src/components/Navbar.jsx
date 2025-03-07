@@ -22,9 +22,10 @@ const Navbar = ({ toggleDarkMode }) => {
   return (
     <nav className="golden-nav">
       {/* Logo/Name */}
-      <div className="nav-logo"> 😇&#8203 ;&#8203;
+      <div className="nav-logo">😇
 
- </div>
+
+      </div>
 
       {/* Hamburger Icon for Mobile */}
       <button className="hamburger-btn" onClick={handleMenuToggle}>
