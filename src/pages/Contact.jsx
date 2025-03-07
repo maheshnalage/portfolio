@@ -11,7 +11,7 @@ function Contact() {
         <button type="submit">Send</button>
       </form>
       <div className="contact-links">
-        <p>Email: <a href="mailto:maheshnalage47@gmail.com">maheshnalage@example.com</a></p>
+        <p>Email: <a href="mailto:maheshnalage47@gmail.com">maheshnalage47@gmail.com</a></p>
         <p>
           LinkedIn:{" "}
           <a
